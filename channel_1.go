@@ -15,14 +15,12 @@ func main() {
 
 		for i := 0; i <= 10; i++ {
 
-			
 			time.Sleep(time.Second * 3)
 			c <- i
 		}
 		
 		// goroutine 2
 	}()
-
 
 	for i := 0; i <= 10; i++ {
 		fmt.Println("blocking!")
