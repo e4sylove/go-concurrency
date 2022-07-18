@@ -6,8 +6,6 @@ import (
 )
 
 func main() {
-	
-
 	// gouroutine 1
 	c := make(chan interface{})
 
@@ -27,5 +25,4 @@ func main() {
 		data := <- c
 		fmt.Println(data)
 	}
-
 }
