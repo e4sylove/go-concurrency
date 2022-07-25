@@ -5,12 +5,15 @@ import (
 	"time"
 )
 
-// Generator: Functions that return a channel
+// these program make Joe and Ann count in lockstep
+
 func main() {
-	c := boring("boring!")
+	joe := boring("joe")
+	ann := boring("ann")
 
 	for i := 0; i < 5; i++ {
-		fmt.Printf("you say: %q/n", <-c)
+		fmt.Println(<-joe)
+		fmt.Println(<-ann)
 	}
 
 	fmt.Println("You are boring, I'm leaving")
